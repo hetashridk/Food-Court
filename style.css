@@ -1,0 +1,301 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    /* margin: 270px auto 0; */
+    /* width: 590px; */
+    /* height: 50px; */
+    background: #5b56c0;
+    border-radius: 8px;
+    font-size: 0;
+    box-shadow:0 2px 3px 0 rgba(0, 0, 0, .1) ;
+}
+
+nav a{
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: rgb(14, 1, 9);
+    line-height: 50px;
+    text-decoration: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* animation */
+nav .animation{
+    position: absolute;
+    height: 100%;    /*To make a box of wheat color*/
+    top: 0%;        /*To make a box of wheat color*/
+    z-index: 0;
+    background: wheat;
+    border-radius: 5px;
+    transition: all 0.5s ease 0s;
+}
+
+
+/* For home */
+a:nth-child(1){
+    width: 100px;
+}
+
+/* For wheat color on HOME */
+nav .HOME, a:nth-child(1):hover~.animation{
+    width: 100px;
+    left: 0;
+}
+
+/* For services */
+a:nth-child(2){
+    width: 110px;
+}
+
+/* For wheat color on SERVICES */
+nav .SERVICES, a:nth-child(2):hover~.animation{
+    width: 110px;
+    left: 100px;
+}
+
+/* For menu */
+a:nth-child(3){
+    width: 100px;
+}
+
+/* For wheat color on MENU */
+nav .MENU, a:nth-child(3):hover~.animation{
+    width: 100px;
+    left: 210px;
+}
+
+/* For About us */
+a:nth-child(4){
+    width: 160px;
+}
+
+/* For wheat color on ABOUT US */
+nav .ABOUTUS, a:nth-child(4):hover~.animation{
+    width: 160px;
+    left: 310px;
+}
+
+/* For contact us */
+a:nth-child(5){
+    width: 120px;
+}
+
+/* For wheat color on CONTACT US */
+nav .CONTACTUS, a:nth-child(5):hover~.animation{
+    width: 120px;
+    left: 470px;
+}
+/* Navigation over */
+
+section{
+    background: #c05684;
+}
+
+/* Home */
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.home::before{
+    content: "";
+    position: absolute;
+    /* background: black; */
+    background: url('img/logo.jpg') no-repeat center center/cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.25;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* menu Section */
+#menu-section{ 
+    position: relative;
+}
+
+#menu-section::before{
+ content: "";
+ position: absolute;
+ background: url('img/desert.jpg');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+
+}
+
+#menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.menu-item{
+    padding: 34px;
+    border: 3px dashed rosybrown;
+    margin: 3px;
+}
+
+#menu img{
+    height: 124px;
+}
+
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+    border:3px solid #5b56c0;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+   margin: 10px;
+   padding: 2px;
+
+}
+
+#payment-section{ 
+    position: relative;
+}
+
+#payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.payment-item{
+    padding: 34px;
+    border: 3px dashed #13f44c;
+    margin: 3px;
+}
+
+#payment img{
+    height: 124px;
+}
+
+footer{
+    background: rgb(16, 198, 53);
+    color: white;
+    padding: 10px 30px;
+    margin: 30px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+    border: 3px solid rgb(1, 11, 14);
+    border-radius: 20px;
+}
+
+.h-secondary{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 5px;
+    font-size: 2.3rem;
+    padding: 12px;
+    border: 2px dashed blue;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+    font-style: italic;
+    text-transform: inherit;
+    text-shadow: 1px 1px blueviolet
+}
